@@ -16,23 +16,18 @@ import random
 # Summarizer
 # Chat functionality
 uploaded_file = st.file_uploader("Upload a PDF")
-btn = False
 if uploaded_file:
     st.header("Summarization")
     summary = "This text explains... demo text needs to be fixed" # Write Summarization here
     summary_placeholder = st.empty() 
-    full_response = ""
-    for chunk in summary.split():
-        full_response += chunk + " "
-        time.sleep(0.1)
-        # Add a blinking cursor to simulate typing
-        summary_placeholder.markdown(full_response + "▌")
+    # full_response = ""
+    # for chunk in summary.split():
+    #     full_response += chunk + " "
+    #     time.sleep(0.1)
+    #     # Add a blinking cursor to simulate typing
+    #     summary_placeholder.markdown(full_response + "▌")
     summary_placeholder.markdown(summary)
-    btn = st.button("Click to Access the Chatbot")
-
-
-if btn:
-# Load messages from session storage
+    # Load messages from session storage
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
