@@ -15,6 +15,9 @@ import random
 # Transcript
 # Summarizer
 # Chat functionality
+
+
+
 uploaded_file = st.file_uploader("Upload a PDF")
 if uploaded_file:
     st.header("Summarization")
